@@ -10,7 +10,9 @@ PRODUCT_PACKAGES += \
     com.google.android.maps.jar
 # Privacy-friendly netmonitor
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
-
+# Make sure that device overlays won't prevent the use
+# of microG as location provider
+PRODUCT_PACKAGE_OVERLAYS := vendor/cm/overlay/microg
 
 PRODUCT_BRAND ?= LineageOS
 
