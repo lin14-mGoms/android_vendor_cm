@@ -250,11 +250,6 @@ ifndef CM_BUILDTYPE
     endif
 endif
 
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
-    CM_BUILDTYPE :=
-endif
-
 ifdef CM_BUILDTYPE
     ifneq ($(CM_BUILDTYPE), SNAPSHOT)
         ifdef CM_EXTRAVERSION
