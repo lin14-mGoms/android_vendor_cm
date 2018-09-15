@@ -15,6 +15,8 @@ PRODUCT_PACKAGES += cromite-webview
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
 # AuroraStore
 PRODUCT_PACKAGES += AuroraServices AuroraStore
+# IPTABLES Block script
+PRODUCT_PACKAGES += z_iptables
 # Make sure that device overlays won't prevent the use
 # of microG as location provider
 PRODUCT_PACKAGE_OVERLAYS := vendor/cm/overlay/microg
