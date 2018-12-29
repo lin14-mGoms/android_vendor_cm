@@ -1,5 +1,19 @@
 PRODUCT_BRAND ?= LineageOS
 
+# Unofficial patch level
+ADDITIONAL_DEFAULT_PROPERTIES += ro.cm.custom_version=2023-11-01
+
+# Sign with own key
+ifneq ($(OWN_KEYS_DIR),)
++PRODUCT_DEFAULT_DEV_CERTIFICATE := $(OWN_KEYS_DIR)/releasekey
+PRODUCT_OTA_PUBLIC_KEYS := $(OWN_KEYS_DIR)/releasekey
+PRODUCT_EXTRA_RECOVERY_KEYS := $(OWN_KEYS_DIR)/releasekey
+endif
+
+# Updater URI
+PRODUCT_PROPERTY_OVERRIDES += \
+    cm.updater.uri=https://raw.githubusercontent.com/lin14-mGoms/OTA/cm-14.1/$(CM_BUILD).json
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -247,11 +261,6 @@ ifndef CM_BUILDTYPE
         RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^CM_||g')
         CM_BUILDTYPE := $(RELEASE_TYPE)
     endif
-endif
-
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
-    CM_BUILDTYPE :=
 endif
 
 ifdef CM_BUILDTYPE
