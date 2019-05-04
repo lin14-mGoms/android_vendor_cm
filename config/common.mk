@@ -12,6 +12,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
 # Bromite Webview
 PRODUCT_PACKAGES += bromite-webview
+# YalpStore
+PRODUCT_PACKAGES += YalpStore
 # Make sure that device overlays won't prevent the use
 # of microG as location provider
 PRODUCT_PACKAGE_OVERLAYS := vendor/cm/overlay/microg
