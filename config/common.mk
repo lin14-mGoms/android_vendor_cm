@@ -7,6 +7,10 @@ PRODUCT_OTA_PUBLIC_KEYS := $(OWN_KEYS_DIR)/releasekey
 PRODUCT_EXTRA_RECOVERY_KEYS := $(OWN_KEYS_DIR)/releasekey
 endif
 
+# Updater URI
+PRODUCT_PROPERTY_OVERRIDES += \
+    cm.updater.uri=https://raw.githubusercontent.com/lin14-mGoms/OTA/cm-14.1-oms/$(CM_BUILD).json
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -133,6 +137,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     ThemeInterfacer \
     Trebuchet \
+    Updater \
     WallpaperPicker \
     WeatherProvider
 
