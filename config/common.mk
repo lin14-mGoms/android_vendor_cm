@@ -14,7 +14,7 @@ PRODUCT_PACKAGES += privacy-friendly-netmonitor
 # Bromite Webview
 PRODUCT_PACKAGES += bromite-webview
 # AuroraStore
-PRODUCT_PACKAGES += AuroraStore
+PRODUCT_PACKAGES += AuroraServices AuroraStore
 # Make sure that device overlays won't prevent the use
 # of microG as location provider
 PRODUCT_PACKAGE_OVERLAYS := vendor/cm/overlay/microg
