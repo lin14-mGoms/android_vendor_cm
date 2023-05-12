@@ -1,5 +1,5 @@
 # Unofficial patch level
-ADDITIONAL_DEFAULT_PROPERTIES += ro.cm.custom_version=2023-04-01
+ADDITIONAL_DEFAULT_PROPERTIES += ro.cm.custom_version=2023-05-01
 
 # microG packages
 PRODUCT_PACKAGES += \
