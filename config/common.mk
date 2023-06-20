@@ -8,8 +8,6 @@ PRODUCT_PACKAGES += \
     FakeStore \
     FDroid \
     FDroidPrivilegedExtension \
-    IchnaeaNlpBackend \
-    NominatimNlpBackend \
     additional_repos.xml
 # Privacy-friendly netmonitor
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
