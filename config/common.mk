@@ -9,6 +9,8 @@ PRODUCT_PACKAGES += \
     FDroid \
     FDroidPrivilegedExtension \
     additional_repos.xml
+# Cromite webview
+PRODUCT_PACKAGES += cromite-webview
 # Privacy-friendly netmonitor
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
 # AuroraStore
