@@ -11,8 +11,6 @@ PRODUCT_PACKAGES += \
     additional_repos.xml
 # Privacy-friendly netmonitor
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
-# Bromite Webview
-PRODUCT_PACKAGES += bromite-webview
 # AuroraStore
 PRODUCT_PACKAGES += AuroraServices AuroraStore
 # Make sure that device overlays won't prevent the use
