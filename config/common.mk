@@ -1,7 +1,7 @@
 PRODUCT_BRAND ?= LineageOS
 
 # Unofficial patch level
-ADDITIONAL_DEFAULT_PROPERTIES += ro.cm.custom_version=2024-08-01
+ADDITIONAL_DEFAULT_PROPERTIES += ro.cm.custom_version=2024-09-01
 
 # Cromite webview
 PRODUCT_PACKAGES += cromite-webview
